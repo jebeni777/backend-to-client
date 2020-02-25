@@ -31,6 +31,12 @@ export default {
             type: 'string'
         },
         {
+            name: 'category',
+            title: 'Food Category',
+            type: 'reference',
+            to: { type: 'categories-foods' }
+        },
+        {
             name: 'benefits',
             title: 'Benefits',
             type: 'string'

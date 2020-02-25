@@ -1,6 +1,6 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'nutrient',
+  title: 'Nutrient',
   type: 'document',
   fields: [
     {
@@ -18,12 +18,6 @@ export default {
       }
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'}
-    },
-    {
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
@@ -31,16 +25,23 @@ export default {
         hotspot: true
       }
     },
+    // {
+    //   name: 'nutrient',
+    //   title: 'Nutrient',
+    //   type: 'array',
+    //   of: [{ type: 'reference', to: { type: 'categories-ailments' } }]
+    // },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
+      name: 'benefits',
+      title: 'Benefits',
+      type: 'string'
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime'
+      name: 'ingredients',
+      title: 'Ingredients',
+      type: 'array',
+      // of: [{ type: 'reference', to: { type: 'recipe' } }]
+      of: [{ type: 'string' }]
     },
     {
       name: 'body',
@@ -52,13 +53,13 @@ export default {
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
+      author: 'recipe.name',
       media: 'mainImage'
     },
     prepare(selection) {
-      const {author} = selection
+      const { recipe } = selection
       return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`
+        subtitle: recipe && `by ${recipe}`
       })
     }
   }

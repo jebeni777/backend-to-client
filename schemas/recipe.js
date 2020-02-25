@@ -1,11 +1,11 @@
 export default {
-  name: 'author',
-  title: 'Author',
+  name: 'recipe',
+  title: 'Recipe',
   type: 'document',
   fields: [
     {
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Title',
       type: 'string'
     },
     {
@@ -26,17 +26,27 @@ export default {
       }
     },
     {
-      name: 'bio',
-      title: 'Bio',
+      name: 'ingredients',
+      title: 'Ingredients',
       type: 'array',
       of: [
         {
           title: 'Block',
           type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
+          styles: [{ title: 'Normal', value: 'normal' }],
           lists: []
         }
       ]
+    },
+    {
+      name: 'directions',
+      title: 'Directions',
+      type: 'string'
+    },
+    {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent'
     }
   ],
   preview: {

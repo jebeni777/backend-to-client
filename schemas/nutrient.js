@@ -25,17 +25,17 @@ export default {
         hotspot: true
       }
     },
+    {
+      name: 'imageAltText',
+      title: 'ImageAltText',
+      type: 'string'
+    },
     // {
     //   name: 'nutrient',
     //   title: 'Nutrient',
     //   type: 'array',
     //   of: [{ type: 'reference', to: { type: 'categories-ailments' } }]
     // },
-    {
-      name: 'benefits',
-      title: 'Benefits',
-      type: 'string'
-    },
     {
       name: 'ingredients',
       title: 'Ingredients',

@@ -6,7 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
 import blockContent from './blockContent'
-import ailments from './categories-ailments'
+import ailments from './ailments'
 import categoriesFoods from './categories-foods'
 import nutrient from './nutrient'
 import ingredient from './ingredient'

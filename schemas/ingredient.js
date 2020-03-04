@@ -37,9 +37,9 @@ export default {
             to: { type: 'categories-foods' }
         },
         {
-            name: 'benefits',
+            name: 'body',
             title: 'Benefits',
-            type: 'string'
+            type: 'blockContent'
         },
         {
             name: 'nutrients',
@@ -49,10 +49,10 @@ export default {
             of: [{ type: 'string' }]
         },
         {
-            name: 'recipes',
-            title: 'Recipes',
+            name: 'uses',
+            title: 'Ways to use',
             type: 'array',
-            // of: [{ type: 'reference', to: { type: 'recipe' } }]
+            // of: [{ type: 'reference', to: { type: 'uses' } }]
             of: [{ type: 'string' }]
         }
     ],
@@ -60,13 +60,13 @@ export default {
     preview: {
         select: {
             title: 'title',
-            author: 'author.name',
+            // author: 'author.name',
             media: 'mainImage'
         },
         prepare(selection) {
-            const { author } = selection
+            const { uses } = selection
             return Object.assign({}, selection, {
-                subtitle: author && `by ${author}`
+                subtitle: uses && `by ${uses}`
             })
         }
     }

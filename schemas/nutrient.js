@@ -40,12 +40,12 @@ export default {
       name: 'ingredients',
       title: 'Ingredients',
       type: 'array',
-      // of: [{ type: 'reference', to: { type: 'recipe' } }]
+      // of: [{ type: 'reference', to: { type: 'uses' } }]
       of: [{ type: 'string' }]
     },
     {
       name: 'body',
-      title: 'Body',
+      title: 'Benefits',
       type: 'blockContent'
     }
   ],
@@ -53,13 +53,13 @@ export default {
   preview: {
     select: {
       title: 'title',
-      author: 'recipe.name',
+      // author: 'uses.name',
       media: 'mainImage'
     },
     prepare(selection) {
-      const { recipe } = selection
+      const { uses } = selection
       return Object.assign({}, selection, {
-        subtitle: recipe && `by ${recipe}`
+        subtitle: uses && `by ${uses}`
       })
     }
   }

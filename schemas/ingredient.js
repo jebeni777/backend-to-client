@@ -33,8 +33,19 @@ export default {
         {
             name: 'category',
             title: 'Food Category',
-            type: 'reference',
-            to: { type: 'categories-foods' }
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Vegetable', value: 'Vegetable' },
+                    { title: 'Dairy', value: 'Dairy' },
+                    { title: 'Fruit', value: 'Fruit' },
+                    { title: 'Meat-n-eggs', value: 'Meat-n-eggs' },
+                    { title: 'Grains', value: 'Grains' },
+                    { title: 'Sugar', value: 'Sugar' },
+                ],
+                layout: 'dropdown'
+            }
+            // to: { type: 'categories-foods' }
         },
         {
             name: 'body',

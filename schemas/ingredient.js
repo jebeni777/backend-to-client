@@ -36,12 +36,12 @@ export default {
             type: 'string',
             options: {
                 list: [
-                    { title: 'Vegetable', value: 'Vegetable' },
-                    { title: 'Dairy', value: 'Dairy' },
-                    { title: 'Fruit', value: 'Fruit' },
-                    { title: 'Meat-n-eggs', value: 'Meat-n-eggs' },
-                    { title: 'Grains', value: 'Grains' },
-                    { title: 'Sugar', value: 'Sugar' },
+                    { title: 'vegetable', value: 'vegetable' },
+                    { title: 'dairy', value: 'dairy' },
+                    { title: 'fruit', value: 'fruit' },
+                    { title: 'meat-n-eggs', value: 'meat-n-eggs' },
+                    { title: 'grains', value: 'grains' },
+                    { title: 'sugar', value: 'sugar' },
                 ],
                 layout: 'dropdown'
             }

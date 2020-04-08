@@ -30,39 +30,22 @@ export default {
             title: 'ImageAltText',
             type: 'string'
         },
-        // {
-        //     name: 'category',
-        //     title: 'Food Category',
-        //     type: 'string',
-        //     options: {
-        //         list: [
-        //             { title: 'vegetable', value: 'vegetable' },
-        //             { title: 'dairy', value: 'dairy' },
-        //             { title: 'fruit', value: 'fruit' },
-        //             { title: 'meat-n-eggs', value: 'meat-n-eggs' },
-        //             { title: 'grains', value: 'grains' },
-        //             { title: 'sugar', value: 'sugar' },
-        //         ],
-        //         layout: 'dropdown'
-        //     }
-        //     // to: { type: 'categories-foods' }
-        // },
         {
             name: 'category',
             title: 'Food Category',
-            type: 'reference',
-            // options: {
-            //     list: [
-            //         { title: 'vegetable', value: 'vegetable' },
-            //         { title: 'dairy', value: 'dairy' },
-            //         { title: 'fruit', value: 'fruit' },
-            //         { title: 'meat-n-eggs', value: 'meat-n-eggs' },
-            //         { title: 'grains', value: 'grains' },
-            //         { title: 'sugar', value: 'sugar' },
-            //     ],
-            //     layout: 'dropdown'
-            // }
-            to: { type: 'categories-foods' }
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'vegetable', value: 'vegetable' },
+                    { title: 'dairy', value: 'dairy' },
+                    { title: 'fruit', value: 'fruit' },
+                    { title: 'meat-n-eggs', value: 'meat-n-eggs' },
+                    { title: 'grains', value: 'grains' },
+                    { title: 'sugar', value: 'sugar' },
+                ],
+                layout: 'dropdown'
+            }
+            // to: { type: 'categories-foods' }
         },
         {
             name: 'body',
